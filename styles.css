@@ -4,15 +4,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+  cursor:default;
 }
 
 html {
   background: #ffffff;
+  margin-top: 65px;
 }
 
 body {
-  margin-bottom: 20vw;
+  margin-bottom: 10vw;
 }
 
 h1,
@@ -35,7 +36,14 @@ h6 {
 .underline {
   text-decoration: underline;
   font-family: inherit;
-  font-weight: inherit;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
 
 .style1 {
@@ -57,15 +65,15 @@ div.thanks {
   position: fixed;
   bottom: 7vw;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 100%) rotate(1deg);
   background-color: #ffe395;
   border: 1px #FFD460 solid;
   margin: 0 auto;
   padding: 10px;
   border-radius: 15px;
-  z-index: 9999;
+  z-index: 1;
   transition: all 0.2s ease 0s;
-  width: 85%;
+  width: auto;
   box-shadow: 0 10px 20px 1em rgb(155 155 155 / 25%);
 }
 
@@ -78,7 +86,6 @@ p.thanks {
   text-align: center;
   font-size: larger;
   text-transform: capitalize;
-
 }
 
 /* Navigation Bar: */
@@ -91,11 +98,21 @@ button {
   text-decoration: none;
 }
 
-header {
+header{
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0px 5px 0 rgb(155 155 155 / 25%);
+  text-transform: uppercase;
+}
+
+header:first-child {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 1.3% 5%;
+  background-color:#ffffff;
+  z-index: 1;
 }
 
 .logo {
@@ -152,12 +169,13 @@ header button:hover {
 
 /* Index.html */
 #page-fold {
-  height: 20em;
+  height: 30em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 0;
+  line-height: 3em;
 }
 
 #hook-h1 {
@@ -236,18 +254,18 @@ header button:hover {
   min-width: 90%;
 }
 
-.content-cards div {
+.content-cards > div {
   background: #FAFAFA;
   border: none;
   border-radius: 27px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+
   padding: 20px 20px;
   box-shadow: 0 10px 20px .5em rgb(155 155 155 / 25%);
-  max-width: 20em;
-  transition: all ease 0.4s 0s;
+  max-width: 30%;
+  transition:  0.5s ease 0s;
   line-height: 1.2em;
 }
 
@@ -264,16 +282,88 @@ header button:hover {
 
 #card1 {
   order: 1;
+  margin-right: 5px;
+  min-width: 0;
 }
 
 #card2 {
-  order: 2;
+  order: 1;
+  margin: 0 5px;
+  min-width: 0;
 }
 
 #card3 {
   order: 1;
+  margin-left: 5px;
+  min-width: 0;
 }
 
 .content-cards p {
-  margin: 0;
+  margin: 0 0 10px 0;
+}
+
+.content-card-button-div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0 0 0;
+}
+
+button.content-cards-cta{
+  color: #00000000;
+  transition:  0.5s ease 0.1s;
+  border: 0;
+  background-color: #191d2300;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: .95em;
+  cursor: pointer;
+}
+
+#card1:hover .content-cards-cta{
+  background-color: #ffe395;
+  box-shadow: 0 10px 20px .5em rgb(155 155 155 / 25%);
+  color:#000000
+}
+
+#card2:hover .content-cards-cta{
+  background-color: #ffe395;
+  box-shadow: 0 10px 20px .5em rgb(155 155 155 / 25%);
+  color:#000000
+}
+
+#card3:hover .content-cards-cta{
+  background-color: #ffe395;
+  box-shadow: 0 10px 20px .5em rgb(155 155 155 / 25%);
+  color:#000000
+}
+
+@media screen and (max-width: 1200px){
+  .content-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-cards > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  #card1 {
+    order: 1;
+    margin-bottom: 5px;
+    min-width: 90%;
+  }
+
+  #card2 {
+    order: 1;
+    margin: 5px 0;
+    min-width: 90%;
+  }
+
+  #card3 {
+    order: 1;
+    margin-top: 5px;
+    min-width: 90%;
+  }
 }
