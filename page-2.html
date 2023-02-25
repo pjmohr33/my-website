@@ -6,52 +6,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/mobile.css">
+  <link rel="stylesheet" href="CSS/animations.css">
 </head>
 
 <body>
   <header>
     <a title="Click to visit the Home Page" class="logo" href="index.html">johnathan mohr</a>
-      <nav>
-        <ul class="nav__links">
-          <li><a title="Click to visit the X" href="page-3.html">BEST Tools</a></li>
-          <li><a title="Click to visit the X" href="page-4.html">Freebies</a></li>
-        </ul>
-      </nav>
-      <a class="reset-link" href="page-2.html"><button>Contact</button></a>
+    <nav>
+      <ul class="nav__links">
+        <li><a title="Click to visit the X" href="page-3.html">BEST Tools</a></li>
+        <li><a title="Click to visit the X" href="page-4.html">Freebies</a></li>
+      </ul>
+    </nav>
+    <a class="reset-link" href="page-2.html"><button>Contact</button></a>
   </header>
 
-  <form action="form-handling-url" method="post">
-    <fieldset>
-      <label for="firstname">First Name:</label>
-      <input type="text" id=firstname name="first_name">
-
-      <label for="lastname">Last Name:</label>
-      <input type="text" id=lastname name="last_name">
-
-      <label for="contact-email">Your Email:</label>
-      <input type="email" id=contact-email name="contact_email">
-
-      <label for="contact-phone">Your Best Cell Number:</label>
-      <input type="tel" id=contact-phone name=contact_phone>
-
-      <p>Request Type:</p>
-      <input type="radio" id="event" name="request_type" value="event">
-      <label for="event">Event</label>
-      <input type="radio" id="networking" name="request_type" value="networking">
-      <label for="networking">Networking</label>
-      <input type="radio" id="project-review" name="request_type" value="project-review">
-      <label for="project-review">Project Review</label>
-      <input type="radio" id="other" name="request_type" value="other">
-      <label for="other">Other</label>
-
+  <form class="contact-us" action="non-existent-form-handler" method="post">
+    <fieldset class="contact-us">
+      <legend>Contact Us!</legend>
+      <div id="name">
+        <div class="flex-column">
+          <label for="firstname">First Name:</label>
+          <input type="text" id=firstname name="first_name">
+        </div>
+        <div class="flex-column">
+          <label for="lastname">Last Name:</label>
+          <input type="text" id=lastname name="last_name">
+        </div>
+      </div>
+      <div id="email-phone">
+        <div class="flex-column">
+          <label for="contact-email">Your Email:</label>
+          <input type="email" id=contact-email name="contact_email">
+        </div>
+        <div class="flex-column">
+          <label for="contact-phone">Your Best Cell Number:</label>
+          <input type="tel" id=contact-phone name=contact_phone>
+        </div>
+      </div>
+      <div id="request-type">
+        <p>Request Type:</p>
+        <input type="radio" id="event" name="request_type" value="event">
+        <label class="request-label" for="event">Event</label>
+        <input type="radio" id="networking" name="request_type" value="networking">
+        <label class="request-label" for="networking">Networking</label>
+        <input type="radio" id="project-review" name="request_type" value="project-review">
+        <label class="request-label" for="project-review">Project Review</label>
+        <input type="radio" id="other" name="request_type" value="other">
+        <label class="request-label" for="other">Other</label>
+      </div>
       <label for="request">Explain Your Request Please:</label>
       <textarea id="request" name="form_request"></textarea>
-
-      <input type="checkbox" id="" name="">
-      <label>Checkbox Label</label>
-
-      <button>Clicking May Spin The Form... But It Will Send Your Request </button>
+      <div class="checkbox">
+        <label>Checkbox Label</label>
+        <input type="checkbox" id="" name="">
+      </div>
+      <button type="submit">Clicking May Spin The Form... But It Will Send Your Request </button>
 
     </fieldset>
   </form>
