@@ -10,6 +10,8 @@
 html {
   background: #ffffff;
   margin-top: 65px;
+  width: 100vw;
+  height: 100vh;
 }
 
 body {
@@ -61,31 +63,33 @@ h6 {
   text-decoration: none;
 }
 
+.relative{
+  position: relative;
+  bottom: 0vw;
+}
+
 div.thanks {
-  position: fixed;
-  bottom: 7vw;
-  left: 50%;
-  transform: translate(-50%, 100%) rotate(1deg);
   background-color: #ffe395;
   border: 1px #FFD460 solid;
-  margin: 0 auto;
+  margin: 0 auto 5vh;
   padding: 10px;
   border-radius: 15px;
   z-index: 1;
-  transition: all 0.2s ease 0s;
   width: auto;
-  box-shadow: 0 10px 20px 1em rgb(155 155 155 / 25%);
+  box-shadow: 0 10px 20px 1em rgb(155 155 155 / 75%);
+  font-size: .8em;
 }
 
-div.thanks:hover {
-  cursor: pointer;
-  background-color: #fff2cd;
+.thanks > a {
+  display: flex;
+  flex-shrink: 4;
 }
 
 p.thanks {
   text-align: center;
   font-size: larger;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 /* Navigation Bar: */
@@ -300,6 +304,7 @@ header button:hover {
 
 .content-cards p {
   margin: 0 0 10px 0;
+  width: 90%;
 }
 
 .content-card-button-div{
@@ -340,30 +345,100 @@ button.content-cards-cta{
   color:#000000
 }
 
-@media screen and (max-width: 1200px){
-  .content-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .content-cards > div {
-    flex-direction: column;
-    align-items: center;
-  }
-  #card1 {
-    order: 1;
-    margin-bottom: 5px;
-    min-width: 90%;
+/* Page 2 */
+form.contact-us{
+  margin: 10% 10% auto;
+}
+
+fieldset.contact-us{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  background: #FAFAFA;
+  border: none;
+  border-radius: 27px;
+  box-shadow: 0 10px 20px 1em rgb(155 155 155 / 25%);
+}
+fieldset.contact-us > legend{
+  position: relative;
+  transform: translate(0, 35px);
+  margin: 30px auto;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+#name, #email-phone{
+  display: flex;
+  width: 100%;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+#email-phone{
+  margin-top: 10px;
+}
+#name input, #email-phone input{
+width: auto;
+}
+
+#name input:first-of-type, #email-phone input:first-of-type{
+  margin-right: 20px;
+}
+
+fieldset.contact-us > label{
+margin-top: 10px;
+}
+
+fieldset.contact-us input, fieldset.contact-us textarea{
+border-radius: 5px;
+border: gray solid 1px;
+}
+
+#request-type{
+margin-top: 10px;
+}
+
+#request-type > p{
+  margin-bottom: 5px;
+}
+
+.request-label:not(:last-of-type){
+  padding-right: 10px;
+}
+
+fieldset.contact-us > textarea{
+  height: 10em;
+  margin-top: 5px;
+}
+
+.checkbox{
+  display: flex;
+  margin: 10px 0;
+}
+.checkbox > label{
+padding: 0 10px 0 0;
+}
+
+.checkbox > input{
+align-self: center;
   }
 
-  #card2 {
-    order: 1;
-    margin: 5px 0;
-    min-width: 90%;
-  }
+fieldset >button{
+  border-radius: 20px;
+  border: gray 0px solid;
+  width: fit-content;
+  margin: auto auto;
+  padding: 5px 10px;
+  background-color: #ffe395;
+  transition: all 1s ease;
+}
 
-  #card3 {
-    order: 1;
-    margin-top: 5px;
-    min-width: 90%;
-  }
+fieldset >button:hover{
+  background-color: #fff0c8;
+  cursor: pointer;
+  scale: 1.001;
 }

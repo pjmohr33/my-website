@@ -1,0 +1,16 @@
+/* Elements */
+div.thanks {
+  position: fixed;
+  bottom: 5vh;
+  left: 50%;
+  transform: translate(-50%, 90%);
+  transition: all 0.2s ease 0s;
+}
+
+/* Transformations */
+div.thanks:hover {
+  cursor: pointer;
+  background-color: #fff2cd;
+}
+
+/* Keyframes */
