@@ -494,3 +494,62 @@ ul.vault > a > li{
   font-size: 1.2em;
   margin: 0 0 12px;
 }
+
+/* Page four/4 (images) */
+h1.freebies{
+  text-align: center;
+  margin: 20px 0;
+}
+
+div.freebies > a{
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  align-items: center;
+  margin: 10px auto;
+}
+
+div.freebies img{
+  width: 25vw;
+  cursor: pointer;
+}
+
+div.freebies-1, div.freebies-2{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+div.freebies-1{
+  margin-bottom: 40px;
+}
+
+div.freebies a {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 20px .5em rgb(155 155 155 / 15%);
+  border-radius: 25px;
+  padding: 15px;
+  height: 100%;
+}
+
+div.freebies a:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px .5em rgb(155 155 155 / 30%);
+
+}
+
+div.freebies acronym{
+text-decoration: none;
+}
+
+div.freebies a label{
+  margin: 10px auto 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all 1s ease 0s;
+}
+
+div.freebies a:hover label{
+text-decoration: underline;
+cursor: pointer;
+}
