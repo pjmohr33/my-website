@@ -1,5 +1,5 @@
 :root {
-  --fs-xl: .5rem;
+  --fs-xl: clamp(1.5rem, 1rem + 3vw , 4rem);
   --fs-sxl: 3rem;
   --fs-l: 1.5rem;
   --fs-m: 1.25em;
@@ -58,6 +58,10 @@ h6 {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.dark-yellow{
+  color: #FFD460;
 }
 
 .style1 {
@@ -182,47 +186,54 @@ header button:hover {
 
 /* Index.html */
 #page-fold {
-  height: 30em;
+  height: calc(15vw+45vh);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
-  margin: 0;
-  line-height: 3em;
+  padding: 0 50px;
+
 }
 
-#hook-h1 {
+#page-fold *{
+  line-height: 1.4em;
+}
+
+div.hook-h1{
+ white-space: pre-line;
+}
+
+.hook-h1 *:not(span){
   font-weight: 200;
   color: #191d23;
   text-align: center;
-  margin: 0 0px 40px;
   padding: 0 20px;
-  font-size: var(--fs-xl);
   line-height: 1.1em;
   white-space: pre-line;
+  font-size: calc(var(--fs-xl)*.75);
+}
+.hook-h1 span{
+  font-weight: 500;
 }
 
-.cta {
+#page-fold-btn {
   color: #FFD460;
   text-decoration: underline;
   text-underline-offset: .4em;
   text-decoration-skip: auto;
-  font-size: var(--fs-sxl);
+  font-size: calc(var(--fs-l)*1.05);
   transition: all .4s ease 0s;
   border: 0;
   background-color: #191d2300;
+  margin-bottom: 30px;
 }
 
-.cta:hover {
+#page-fold-btn:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.hook-emp {
-  color: #FFD460;
-  text-decoration: underline;
-  text-shadow: #FAFAFA;
-}
+
 
 #page-subhead {
   display: flex;
@@ -234,15 +245,25 @@ header button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15em;
   background-color: #F1F1F1
 }
 
-.quote {
-  font-weight: 200;
+.quote{
+  padding: 10px 0;
+}
+
+.quote *{
+  font-weight: 300;
   width: 45vw;
   text-align: start;
   font-size: var(--fs-l);
+  text-indent: 10px;
+  line-height: 1.35em;
+  white-space: pre-line;
+}
+
+.quote span{
+  font-weight: 600;
 }
 
 #portrait {
@@ -363,7 +384,7 @@ button.content-cards-cta {
 
 /* Page 2 */
 form.contact-us {
-  margin: 10% 10% auto;
+  margin: 60px 10% auto;
 }
 
 fieldset.contact-us {
