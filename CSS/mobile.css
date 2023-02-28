@@ -134,8 +134,8 @@
   .menu-wrap .menu>div {
     background-color: rgba(0, 0, 0, 0.864);
     border-radius: 50%;
-    width: 500vh;
-    height: 500vh;
+    width: 300vh;
+    height: 300vh;
     display: flex;
     flex: none;
     align-items: center;
