@@ -2,9 +2,25 @@
   .mobile {
     display: none;
   }
+
+  body {
+    padding-bottom: 120px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  :root {
+    --menu-speed: 0.75s;
+    --fs-xl: 1.8rem;
+    --fs-sxl: 1.5rem;
+    --fs-l: clamp(1rem, 1rem +12vw, 1.3rem);
+    --fs-m: 1.25em;
+    --fs-n: 1rem;
+    --fs-s: .8rem;
+    --fs-btn: 1.3rem;
+    --fs-sm-btn: .95rem;
+  }
+
 
   header.desktop {
     display: none;
@@ -21,11 +37,7 @@
   }
 
   /* Navigation Bar */
-  :root {
-    --menu-speed: 0.75s;
-  }
-
-  .menu-wrap {
+    .menu-wrap {
     position: fixed;
     top: 0;
     left: 0;
@@ -135,7 +147,7 @@
   .menu-wrap .menu>div>div * {
     list-style: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: var(--fs-l);
     padding: 1rem;
     font-weight: 700;
     transition: color .4s ease;
@@ -157,25 +169,16 @@
   }
 
   .logo {
-    font-size: .9em;
-    margin: 0 20px 0 auto;
+    margin: 0 30px 0 auto;
   }
 
   /* Home Page */
   #page-fold {
-    height: 15em;
+    height: 100%
   }
 
-  h1#hook-h1 {
-    font-size: 1.3em;
-  }
-
-  .cta {
-    font-size: 1.3em;
-  }
-
-  h2.quote {
-    font-size: 1em;
+  #hook-h1{
+    margin: 10px 0 10px;
   }
 
   div.quote-div {
@@ -231,89 +234,95 @@
   }
 
   /* Page 2 */
-  form.contact-us{
-   margin: 0 5% 10px;
-    }
+  form.contact-us {
+    margin: 0 5% 10px;
+  }
 
-  #name, #email-phone{
+  #name,
+  #email-phone {
     display: flex;
     width: 100%;
     flex-direction: column;
   }
 
-  .flex-column{
+  .flex-column {
     width: 100%;
   }
 
-  div.request-type{
+  div.request-type {
     display: flex;
     flex-direction: row;
   }
-  div#request-type div{
-    margin: 5px 0 0;
-  }
 
-  .request-label{
-    margin: 0px 10px 0 auto;
+  .request-label {
+    margin: 0px auto 0 10px;
     padding: 0;
   }
 
   /* Page three */
-  h1.vault{
-    font-size: 1.5em;
+  h1.vault {
     text-align: center;
     margin: 0 10px;
   }
 
-  h3.vault{
-    font-size: 1em;
+  h3.vault {
     text-align: center;
     margin: 0 30px;
   }
 
-  ul.vault{
+  ul.vault {
     display: flex;
     flex-direction: column;
     margin: 10px 0
   }
 
-  ul.vault a{
+  ul.vault a {
     box-shadow: 0 10px 20px .5em rgb(155 155 155 / 30%);
   }
 
-  ul.vault a:last-of-type{
+  ul.vault a:last-of-type {
     margin: 0 0 100px;
   }
 
   /* Page Four */
-  h1.freebies{
-    font-size: 1.5em;
+  h1.freebies {
     text-align: center;
     margin: 0 10px;
   }
 
-  h3.freebies{
-    font-size: 1em;
+  h3.freebies {
     text-align: center;
     margin: 0 30px;
   }
 
-  div.freebies > a,div.freebies-1, div.freebies-2{
+  div.freebies>a,
+  div.freebies-1,
+  div.freebies-2 {
     display: flex;
     flex-direction: column;
     margin: 0;
   }
 
-  div.freebies-1>a, div.freebies-2>a{
+  div.freebies-1>a,
+  div.freebies-2>a {
     margin-top: 10px;
     box-shadow: 0 10px 20px 0.5em rgb(155 155 155 / 35%);
   }
 
-  div.freebies img{
+  div.freebies img {
     width: 70vw;
   }
 
-  div.freebies-2>a:last-of-type{
+  div.freebies-2>a:last-of-type {
     margin-bottom: 100px;
+  }
+
+  div.thanks {
+    width: 95%;
+  }
+
+  div.thanks * {
+    white-space: normal;
+    font-size: var(--fs-sm-btn);
   }
 }
