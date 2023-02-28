@@ -1,4 +1,4 @@
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
   .mobile {
     display: none;
   }
@@ -6,12 +6,20 @@
   body {
     padding-bottom: 120px;
   }
+
+  #page-fold{
+    height: 30em;
+  }
+
+  .quote-div{
+    height: 15em;
+  }
+
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   :root {
     --menu-speed: 0.75s;
-    --fs-xl: 1.8rem;
     --fs-sxl: 1.5rem;
     --fs-l: clamp(1rem, 1rem +12vw, 1.3rem);
     --fs-m: 1.25em;
@@ -174,15 +182,19 @@
 
   /* Home Page */
   #page-fold {
-    height: 100%
+    margin: 10px 0 0;
+    padding: 0 0 0;
   }
 
-  #hook-h1{
-    margin: 10px 0 10px;
+  div.hook-h1{
+    margin: 0 0px 0px;
   }
 
+  #page-fold-btn {
+  margin: 10px 0 20px;
+  }
   div.quote-div {
-    height: 200px;
+    height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +204,7 @@
   img#portrait {
     height: 15em;
     position: relative;
-    bottom: -30px;
+    bottom: -40px;
     z-index: 0;
     align-self: center;
     margin: 0;
