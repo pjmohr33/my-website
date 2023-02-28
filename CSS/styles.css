@@ -16,6 +16,8 @@ html {
 body {
   margin-top: 65px;
   padding-bottom: 10%;
+  width: 100%;
+  height: 100%;
 }
 
 h1,
@@ -88,7 +90,7 @@ div.thanks {
 
 p.thanks {
   text-align: center;
-  font-size: 1.5em;
+  font-size: clamp(1em, 1em + .5vw, 5em);
   text-transform: capitalize;
   cursor: pointer;
 }
@@ -242,6 +244,7 @@ header button:hover {
   align-self: flex-end;
   position: relative;
   bottom: -90px;
+  z-index: 0;
 }
 
 .index-content {
@@ -498,7 +501,13 @@ ul.vault > a > li{
 /* Page four/4 (images) */
 h1.freebies{
   text-align: center;
-  margin: 20px 0;
+  padding: 20px 0 0;
+}
+
+h3.freebies{
+  text-align: center;
+  padding: 10px 0 20px;
+  font-style: italic;
 }
 
 div.freebies > a{
@@ -511,6 +520,7 @@ div.freebies > a{
 div.freebies img{
   width: 25vw;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 div.freebies-1, div.freebies-2{
@@ -538,12 +548,8 @@ div.freebies a:hover {
 
 }
 
-div.freebies acronym{
-text-decoration: none;
-}
-
-div.freebies a label{
-  margin: 10px auto 20px;
+div.freebies label{
+  margin: 10px auto 15px;
   font-weight: 700;
   text-transform: capitalize;
   transition: all 1s ease 0s;
