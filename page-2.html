@@ -12,15 +12,36 @@
 </head>
 
 <body>
-  <header>
+  <header class="desktop">
     <a title="Click to visit the Home Page" class="logo" href="index.html">johnathan mohr</a>
     <nav>
       <ul class="nav__links">
-        <li><a title="Click to visit the X" href="page-3.html">BEST Tools</a></li>
-        <li><a title="Click to visit the X" href="page-4.html">Freebies</a></li>
+        <li><a title="Click to visit the My Best Sales and Marketing Tools" href="page-3.html">BEST Tools</a></li>
+        <li><a title="Click to visit the Freebies page" href="page-4.html">Freebies</a></li>
       </ul>
     </nav>
     <a class="reset-link" href="page-2.html"><button>Contact</button></a>
+  </header>
+
+  <header class="mobile">
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a title="Click to visit the My Best Sales and Marketing Tools" href="page-3.html">BEST Tools</a></li>
+              <li><a title="Click to visit the Freebies page" href="page-4.html">Freebies</a></li>
+              <li><a title="Click to visit the Contact Us Page" href="page-2.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a title="Click to visit the Home Page" class="logo" href="index.html">johnathan mohr</a>
   </header>
 
   <form class="contact-us" action="non-existent-form-handler" method="post" id="contact-us-form">
@@ -48,14 +69,22 @@
       </div>
       <div id="request-type">
         <p>Request Type:</p>
-        <input type="radio" id="event" name="request_type" value="event">
-        <label class="request-label" for="event">Event</label>
-        <input type="radio" id="networking" name="request_type" value="networking">
-        <label class="request-label" for="networking">Networking</label>
-        <input type="radio" id="project-review" name="request_type" value="project-review">
-        <label class="request-label" for="project-review">Project Review</label>
-        <input type="radio" id="other" name="request_type" value="other">
-        <label class="request-label" for="other">Other</label>
+        <div>
+          <input type="radio" id="event" name="request_type" value="event">
+          <label class="request-label" for="event">Event</label>
+        </div>
+        <div>
+          <input type="radio" id="networking" name="request_type" value="networking">
+          <label class="request-label" for="networking">Networking</label>
+        </div>
+        <div>
+          <input type="radio" id="project-review" name="request_type" value="project-review">
+          <label class="request-label" for="project-review">Project Review</label>
+        </div>
+        <div>
+          <input type="radio" id="other" name="request_type" value="other">
+          <label class="request-label" for="other">Other</label>
+        </div>
       </div>
       <label for="request">Explain Your Request Please:</label>
       <textarea id="request" name="form_request"></textarea>
@@ -63,7 +92,7 @@
         <label>Checkbox Label</label>
         <input type="checkbox" id="" name="">
       </div>
-      <button type="submit">Clicking May Spin The Form... But It Will Send Your Request </button>
+      <button type="submit">Click To Send Your Request </button>
 
     </fieldset>
   </form>
