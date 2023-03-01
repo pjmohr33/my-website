@@ -247,7 +247,11 @@
 
   /* Page 2 */
   form.contact-us {
-    margin: 0 5% 60px;
+    margin: 0 5% 20vh;
+  }
+
+  #contact-us-margin-hack{
+    height: 1px;
   }
 
   #name,
